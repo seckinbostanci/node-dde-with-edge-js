@@ -20,6 +20,7 @@
     "test": "test\\test.bat"
   },
   "devDependencies": {
+    "type": "git",
     "timelineplayer": "git+https://github.com/thunder9/timelineplayer.js.git"
   }
 }
