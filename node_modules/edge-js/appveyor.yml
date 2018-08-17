@@ -1,0 +1,36 @@
+image:
+- Visual Studio 2015
+
+environment:
+  matrix:
+    # node.js
+    - nodejs_version: "6.14.2"
+    - nodejs_version: "7.10.1"
+    - nodejs_version: "8.11.2"
+    - nodejs_version: "9.11.1"
+    - nodejs_version: "10.3.0"
+
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+  - npm install
+  - npm i xunit-viewer
+
+test_script:
+  - node --version
+  - npm --version
+  - dotnet --version
+  - npm test
+  - node tools/coverage.js
+  - SET EDGE_USE_CORECLR=1 & npm test
+  - SET EDGE_USE_CORECLR=1 & node tools/coverage.js
+
+after_test:
+  - ps: |
+      $url = "https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)"
+      $file = '.\test-results.xml'
+      (New-Object 'System.Net.WebClient').UploadFile($url, (Resolve-Path '.\test-results.xml'))
+      Push-AppveyorArtifact (Resolve-Path '.\test-results.xml')
+      Push-AppveyorArtifact (Resolve-Path '.\test-results-xunit-viewer.xml')
+      Push-AppveyorArtifact (Resolve-Path '.\test-results-xunit-viewer.html')
+
+build: off

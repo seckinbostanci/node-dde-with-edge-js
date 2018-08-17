@@ -1,0 +1,25 @@
+{
+  "name": "node-dde",
+  "author": {
+    "name": "seckinbostanci",
+    "url": "https://github.com/seckinbostanci"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seckinbostanci/node-dde-edge-js.git"
+  },
+  "os": [
+    "win32"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "edge-js": "^10.3.1"
+  },
+  "scripts": {
+    "test": "test\\test.bat"
+  },
+  "devDependencies": {
+    "timelineplayer": "git+https://github.com/thunder9/timelineplayer.js.git"
+  }
+}
