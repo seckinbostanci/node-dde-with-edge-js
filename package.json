@@ -1,13 +1,13 @@
 {
-  "name": "node-dde",
+  "name": "node-dde-with-edge-js",
   "author": {
-    "name": "thunder9",
-    "url": "https://github.com/thunder9"
+    "name": "seckinbostanci",
+    "url": "https://github.com/seckinbostanci/node-dde-with-edge-js"
   },
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thunder9/node-dde.git"
+    "url": "git:/github.com/seckinbostanci/node-dde-with-edge-js.git"
   },
   "os": [
     "win32"
