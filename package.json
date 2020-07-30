@@ -1,26 +1,23 @@
 {
-  "name": "node-dde-with-edge-js",
+  "name": "node-dde",
   "author": {
-    "name": "seckinbostanci",
-    "url": "https://github.com/seckinbostanci"
+    "name": "thunder9",
+    "url": "https://github.com/thunder9"
   },
-  "version": "1.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seckinbostanci/node-dde-with-edge-js.git"
+    "url": "git://github.com/thunder9/node-dde.git"
   },
   "os": [
     "win32"
   ],
   "license": "MIT",
   "dependencies": {
-    "edge-js": "10.3.1"
+    "edge-js": "^14.3.1"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "test\\test.bat"
-  },
-  "devDependencies": {
-    "type": "git",
-    "timelineplayer": "git+https://github.com/thunder9/timelineplayer.js.git"
   }
 }
