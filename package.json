@@ -4,7 +4,7 @@
     "name": "seckinbostanci",
     "url": "https://github.com/seckinbostanci/node-dde-with-edge-js"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git:/github.com/seckinbostanci/node-dde-with-edge-js.git"
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "edge-js": "^14.3.1"
+    "edge-js": "19.3.0"
   },
   "devDependencies": {},
   "scripts": {
