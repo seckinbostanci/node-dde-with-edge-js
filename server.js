@@ -1,8 +1,9 @@
 var edge = require("edge-js");
+var path = require("path");
 
 var getInvoker = edge.func({
-  source: __dirname + "/server.cs",
-  references: [__dirname + "/vendor/NDde.dll"],
+  source: process.env.NDDE_SERVER_CS || path.join(__dirname, 'server.cs'),
+  references: [(process.env.NDDE_DLL || path.join(__dirname, 'vendor', 'NDde.dll'))],
   typeName: "NodeDde.Server",
   methodName: "GetInvoker",
 });
